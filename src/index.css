@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+html, body {
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.codeBlock {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  overflow-x: auto;
+
+  white-space: pre;
+  tab-size: 2;
+
+  font-family: "Montserrat", system-ui, sans-serif;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.codeBlock * {
+  color: #fff !important;
+  font-family: "Montserrat", system-ui, sans-serif !important;
+}
+
+.codeBlock code {
+  white-space: pre;
+}
