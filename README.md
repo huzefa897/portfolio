@@ -1,16 +1,61 @@
-# React + Vite
+Here’s a clean README.md for your portfolio website (minimal, dark vibe, explains what it does, how to run, and how to deploy). Copy/paste into a file named README.md in your portfolio repo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Portfolio — GitHub Projects Showcase
 
-Currently, two official plugins are available:
+A minimal dark portfolio website built with **React + Vite + Tailwind**, that pulls my **public GitHub repositories** and displays them on the site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Click any project to open a details modal where the **README.md** is rendered inside the website (including code blocks, lists, images, and links).
 
-## React Compiler
+---
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Fetches public repos from GitHub (latest updated first)
+- Search by repo name / description / language
+- Filter by language
+- Sort by: most recent / stars / name
+- Hide forks toggle
+- Project details modal:
+  - shows repo metadata (stars, language, branch)
+  - renders README.md on the website
+  - fixes relative image and link paths from README
+- Clean minimal dark UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Tech Stack
+
+- React (Vite)
+- Tailwind CSS
+- GitHub REST API
+- react-markdown + remark-gfm (README rendering)
+- react-syntax-highlighter (code blocks)
+
+---
+
+## 🚀 Getting Started
+
+### 1) Clone
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+
+2) Install dependencies
+npm install
+
+3) Configure your GitHub username (optional)
+
+Create a .env file in the root:
+
+VITE_GITHUB_USERNAME=huzefa897
+
+4) Run locally
+npm run dev
+
+
+Vite will print the local URL (usually http://localhost:5173).
+
+🔧 Scripts
+npm run dev      # start development server
+npm run build    # build for production
+npm run preview  # preview the production build locally
