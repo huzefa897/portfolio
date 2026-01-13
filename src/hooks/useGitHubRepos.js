@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-export function useGithubRepos(username) {
+export function useGitHubRepos(username) {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");

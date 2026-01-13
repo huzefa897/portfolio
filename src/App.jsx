@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import RepoControls from "./components/RepoControls";
 import ProjectsGrid from "./components/ProjectsGrid";
 import RepoModal from "./components/RepoModal";
-import { useGithubRepos } from "./hooks/useGithubRepos";
+import { useGitHubRepos } from "./hooks/useGitHubRepos";
 import { useReadme } from "./hooks/useReadme";
 
 const DEFAULT_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "huzefa897";
@@ -10,7 +10,7 @@ const DEFAULT_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "huzefa897";
 export default function App() {
   const [username, setUsername] = useState(DEFAULT_USERNAME);
 
-  const { repos, loading, err, languages } = useGithubRepos(username);
+  const { repos, loading, err, languages } = useGitHubRepos(username);
   const { selectedRepo, readme, readmeLoading, readmeErr, openRepo, closeRepo } = useReadme(username);
 
   const [query, setQuery] = useState("");
